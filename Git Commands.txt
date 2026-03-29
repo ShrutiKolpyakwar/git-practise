@@ -119,12 +119,7 @@ STEP 14: Clone (If You Want New Copy)
 git clone https://github.com/your-username/git-practice.git
 
 Output:
-Cloning into 'git-practice'...
-
-FINAL SUMMARY (REMEMBER THIS FLOW)
-git init
-git status
-git add .
+Cloning into 'git-practice'....
 
 Branching (VERY IMPORTANT)
 git branch            # see branches
@@ -155,8 +150,15 @@ Reset (Advanced but asked sometimes)
 git reset --soft HEAD~1
 #Undo last commit (keep changes)
 
-
+FINAL SUMMARY (REMEMBER THIS FLOW)
+git init
+git status
+git add 
 git commit -m "message"
-git push
+echo "Hello Git" > file.txt   # create file
+git status                   # shows untracked
+git add file.txt             # add to staging
+git commit -m "First commit" # save in git
+git push                     # upload to GitHub
 git pull
 git clone <url>
