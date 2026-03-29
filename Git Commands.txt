@@ -1,0 +1,132 @@
+STEP 0: Open Git Bash : 
+Open Git Bash (after installing Git)
+
+STEP 1: Check Git Installed
+git --version
+
+Expected Output:
+git version 2.xx.x.windows.x
+
+STEP 2: Configure Git (ONLY FIRST TIME)
+git config --global user.name "Shruti"
+git config --global user.email "your_email@gmail.com"
+
+Check:
+git config --list
+
+Expected Output:
+user.name=Shruti
+user.email=your_email@gmail.com
+
+STEP 3: Create Folder (Project)
+mkdir git-practice
+cd git-practice
+
+STEP 4: Initialize Git
+git init
+
+Expected Output:
+Initialized empty Git repository in /.../git-practice/.git/
+
+STEP 5: Check Status
+git status
+
+Expected Output:
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+STEP 6: Create File
+echo "Hello Git" > file.txt
+
+Check again:
+git status
+
+Expected Output:
+Untracked files:
+file.txt
+
+STEP 7: Add File to Staging
+git add file.txt
+OR (for all files):
+git add .
+
+Check:
+git status
+
+Expected Output:
+Changes to be committed:
+new file: file.txt
+
+STEP 8: Commit Changes
+git commit -m "First commit"
+
+✅ Expected Output:
+[master (root-commit) abc123] First commit
+1 file changed, 1 insertion(+)
+create mode 100644 file.txt
+
+STEP 9: Connect to GitHub
+First create repo on GitHub
+Example URL:
+https://github.com/your-username/git-practice.git
+
+Now run:
+git remote add origin https://github.com/your-username/git-practice.git
+
+Check:
+git remote -v
+
+Output:
+origin  https://github.com/your-username/git-practice.git (fetch)
+origin  https://github.com/your-username/git-practice.git (push)
+
+STEP 10: Push Code to GitHub
+git branch -M main
+git push -u origin main
+
+Expected Output:
+
+Enumerating objects...
+Counting objects...
+Writing objects...
+To https://github.com/your-username/git-practice.git
+* [new branch] main -> main
+
+STEP 11: Modify File (Practice Again)
+echo "Second line added" >> file.txt
+
+Check:
+git status
+
+Output:
+modified: file.txt
+
+STEP 12: Add + Commit + Push Again
+git add .
+git commit -m "Updated file"
+git push
+
+Output:
+1 file changed, 1 insertion(+)
+
+STEP 13: Pull (Important)
+git pull
+
+Output:
+Already up to date.
+
+STEP 14: Clone (If You Want New Copy)
+git clone https://github.com/your-username/git-practice.git
+
+Output:
+Cloning into 'git-practice'...
+
+FINAL SUMMARY (REMEMBER THIS FLOW)
+git init
+git status
+git add .
+git commit -m "message"
+git push
+git pull
+git clone <url>
