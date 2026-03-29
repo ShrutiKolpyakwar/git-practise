@@ -125,6 +125,37 @@ FINAL SUMMARY (REMEMBER THIS FLOW)
 git init
 git status
 git add .
+
+Branching (VERY IMPORTANT)
+git branch            # see branches
+git branch feature1   # create branch
+git checkout feature1 # switch branch
+
+Merge (CRITICAL IN COMPANIES)
+git checkout main
+git merge feature1
+#Combines work from branch into main
+
+Log (See History)
+git log
+Shows all commits
+
+Diff (See Changes)
+git diff
+Shows what changed in files
+
+Remove File
+git rm file.txt
+
+Undo Changes (VERY USEFUL)
+git restore file.txt
+#Undo file changes
+
+Reset (Advanced but asked sometimes)
+git reset --soft HEAD~1
+#Undo last commit (keep changes)
+
+
 git commit -m "message"
 git push
 git pull
